@@ -11,4 +11,12 @@ window.onload = function(){
     console.log(ipod.audio);
     ipod.songName = '2.mp3';
     console.log(ipod.song);
+
+
+    document.onselectstart = function(){
+        return false;
+    }
+    document.oncontextmenu = function(){
+        return false;
+    }
 }
