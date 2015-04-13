@@ -1,5 +1,6 @@
 window.onload = function(){
     var
+    t,
     _d = document,
     $  = function (id){ return _d.getElementById(id) },
     _showPlayList = $('show-play-list'),
@@ -44,6 +45,10 @@ window.onload = function(){
         this.playList = {};
         this.audio = $('audio');
         this.currentSong = 0;
+    
+        this.previousRandom;  
+        this.random = false;
+        this.repeat = false;
     }
     musicPlyer.prototype = {
         preparePlay:function(playList){
@@ -63,6 +68,22 @@ window.onload = function(){
             _playPause.children[0].src = './image/pause.png';
             _songName.textContent = this.playList[this.currentSong].name;
             _songInfo.textContent = this.playList[this.currentSong].info;
+
+            clearInterval(t);
+            var l = 0;
+            if(  _songName.offsetWidth  > _songName.parentNode.offsetWidth ){
+                var gundong = function(){
+                    if( l == 0 ){
+                        l =  - _songName.offsetWidth + _songName.parentNode.offsetWidth;   
+                    }else{
+                        console.log('here');
+                        l = 0;
+                    }
+                    _songName.style.marginLeft = l + 'px'
+                }
+                gundong();
+                t = setInterval( gundong,8000);
+            }
         },
         getTime : function(i){
             var
@@ -88,7 +109,11 @@ window.onload = function(){
 
                     handler(cu,rm,bili);
                 }else{
-                    that.nextSong();
+                    if( that.random ){
+                        that.play(that.generateRandom());
+                    }else{
+                        that.nextSong();
+                    }
                 }
             },false);
         },
@@ -100,31 +125,112 @@ window.onload = function(){
             this.audio.pause();
             return 0;
         },
+        generateRandom:function(){
+            var i = Math.round( Math.random()*( this.playList.length - 1) ); 
+            if( i == this.previousRandom ) {
+                i++;
+                if( i == this.playList.length ){
+                    i = 0;
+                }
+            }
+            this.previousRandom = i;
+            this.curentSong = i;
+            console.log(i);
+            return i;
+        },
         nextSong:function(){
-            var last = this.playList.length;
-            this.currentSong = (  ++ this.currentSong  < last )?this.currentSong:0; 
-            this.play();
+            if( this.random ){
+                this.play( this.generateRandom() );
+            }else{
+                var last = this.playList.length;
+                this.currentSong = (  ++ this.currentSong  < last )?this.currentSong:0; 
+                this.play();
+            }
         },
         previousSong:function(){
-            this.currentSong = (  --this.currentSong  >= 0 )?this.currentSong:0; 
-            this.play();
+            if( this.random ){
+                this.play( this.generateRandom() );
+            }else{
+                this.currentSong = (  --this.currentSong  >= 0 )?this.currentSong:0; 
+                this.play();
+            }
+        },
+        toggleRepeat:function(){
+            if( this.audio.getAttribute('loop') ){
+                this.audio.removeAttribute('loop');
+                this.repeat = false;
+                _repeat.style.cssText = 'none';
+            }else{
+                this.audio.setAttribute('loop',true);
+                this.repeat = true;
+                this.random = false;
+                _random.style.cssText = 'none';
+                _repeat.style.cssText = 'background:#d8375b;color:white;border-radius:3px';
+            }
+        },
+        toggleRandom:function(){
+            this.random = (this.random)?false:true;
+            if(this.random){
+                this.repeat = false;
+                this.audio.removeAttribute('loop');
+                _repeat.style.cssText = 'none';
+                _random.style.cssText = 'background:#d8375b;color:white;border-radius:3px';
+            } else{
+                _random.style.cssText = 'none';
+            }
         }
     }
     
     var Ipod  = new musicPlyer()
     Ipod.preparePlay({
         0:{
-            name:'C major',
+            name:'C majorC majorC majorC majorC majorC majorC majorC majorC majorC major',
             url:'./songs/2.mp3',
-            info:'Major C for ginus'
+            info:'Major C for ginusC majorC majorC majorC majorC majorC majorC majorC major'
         },
         1:{
             name:'D major',
             url:'./songs/1.mp3',
             info:'Major D for ginus'
         },
-        length:2
+        2:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        3:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        4:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        5:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        6:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        7:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        8:{
+            name:'E major',
+            url:'./songs/3.mp3',
+            info:'Major E for ginus'
+        },
+        length:9
     });
+
     Ipod.play(); 
     //切换歌曲 暂停
     _next.addEventListener('click',function(e){
@@ -196,7 +302,13 @@ window.onload = function(){
         },300)
     },false)
 
+    _repeat.addEventListener('click',function(){
+        Ipod.toggleRepeat();
+    })
+    _random.addEventListener('click',function(){
+        Ipod.toggleRandom();
+    })
+
     // _d.onselectstart = function(){return false};
     // _d.oncontextmenu = function(){return false};
-
 }

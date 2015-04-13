@@ -3,11 +3,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {font-family:Helvetica Neue,Helvetica; font-size:11px; line-height: 1}
 ol, ul {list-style: none}
 
-.progress-flag,.volume-circle,.volume-shadow{
+.repeat,.random,.progress-flag,.volume-circle,.volume-shadow{
   -webkit-transition:.625s ease;
   -moz-transition:.625s ease;
   -o-transition:.625s ease;
   transition:.625s ease;
+}
+#song-name,#song-info{
+  -webkit-transition:8s linear;
+  -moz-transition:8s linear;
+  -o-transition:8s linear;
+  transition:8s linear;
 }
 
 /* .for-click{ */
@@ -166,8 +172,13 @@ ol, ul {list-style: none}
   position:absolute;
   bottom:4px;
 }
-.repeat:hover,.random:hover{
-  Background:#d8375b;
+/* .repeat:hover,.random:hover{ */
+/*   background:#d8375b; */
+/*   color:white; */
+/*   border-radius:3px; */
+/* } */
+.hover{
+  background:#d8375b;
   color:white;
   border-radius:3px;
 }
@@ -177,16 +188,27 @@ ol, ul {list-style: none}
 .random{
   right:12px;
 }
+
 .song-name{
+  width:62%;
+  overflow:hidden;
+  margin:0 auto;
   font-size:1.4em;
   font-weight:bold;
   margin-top:39px;
   text-align:center;
+  white-space:nowrap;
+  text-overflow:'..';
 }
 .song-info{
+  width:82%;
+  margin:0 auto;
+  overflow:hidden;
   margin-top:8px;
   text-align:center;
+  white-space:nowrap;
 }
+
 .play-list{
   width:320px;
   height:567px;
