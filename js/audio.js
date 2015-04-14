@@ -196,55 +196,35 @@ window.onload = function(){
     }
     
     var Ipod  = new musicPlyer()
+    window.Ipod = Ipod;
     Ipod.preparePlay({
         0:{
-            name:'C majorC majorC majorC majorC majorC majorC majorC majorC majorC major',
-            url:'./songs/2.mp3',
-            info:'Major C for ginusC majorC majorC majorC majorC majorC majorC majorC major'
+            name:'Opera2',
+            url:'./songs/oprea2.mp3',
+            info:'Vitas <<The Myth Of The Shaking Soul Voice>>'
         },
         1:{
             name:'D major',
-            url:'./songs/1.mp3',
+            url:'./songs/oprea2.mp3',
             info:'Major D for ginus'
         },
         2:{
             name:'C majorC majorC jorC  majorC majorC major',
-            url:'./songs/2.mp3',
+            url:'./songs/oprea2.mp3',
             info:'Major C for ginusC majorC majorC majorC major'
         },
         3:{
             name:'E major',
-            url:'./songs/3.mp3',
+            url:'./songs/oprea2.mp3',
             info:'Major E for ginus'
         },
         4:{
             name:'E major',
-            url:'./songs/3.mp3',
+            url:'./songs/oprea2.mp3',
             info:'Major E for ginus'
         },
-        5:{
-            name:'E major',
-            url:'./songs/3.mp3',
-            info:'Major E for ginus'
-        },
-        6:{
-            name:'E major',
-            url:'./songs/3.mp3',
-            info:'Major E for ginus'
-        },
-        7:{
-            name:'E major',
-            url:'./songs/3.mp3',
-            info:'Major E for ginus'
-        },
-        8:{
-            name:'E major',
-            url:'./songs/3.mp3',
-            info:'Major E for ginus'
-        },
-        length:9
+        length:5
     });
-
     Ipod.play(); 
     //切换歌曲 暂停
     _next.addEventListener('click',function(e){
@@ -322,7 +302,6 @@ window.onload = function(){
     _random.addEventListener('click',function(){
         Ipod.toggleRandom();
     })
-
     // _d.onselectstart = function(){return false};
     // _d.oncontextmenu = function(){return false};
 }
