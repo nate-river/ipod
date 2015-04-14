@@ -10,10 +10,10 @@ ol, ul {list-style: none}
   transition:.625s ease;
 }
 #song-name,#song-info{
-  -webkit-transition:8s linear;
-  -moz-transition:8s linear;
-  -o-transition:8s linear;
-  transition:8s linear;
+  -webkit-transition:all 8s linear;
+  -moz-transition:all 8s linear;
+  -o-transition:all 8s linear;
+  transition:all 8s linear;
 }
 
 /* .for-click{ */

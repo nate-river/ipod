@@ -1,4 +1,5 @@
 window.onload = function(){
+    //选取需要改变属性或添加事件的元素
     var
     t,
     _d = document,
@@ -59,6 +60,35 @@ window.onload = function(){
         fastSeek:function(prop){
             this.audio.currentTime = this.audio.duration * prop; 
         },
+        textScroll:function(){
+            clearInterval(this.scrollIntervalId);
+            var arr = []; 
+            for ( var i = 0;  i < arguments.length;  i++){
+                var el = arguments[i];
+                el.setCss3style('transition','none');
+                el.style.marginLeft = 'auto';
+                if( el.offsetWidth > el.parentNode.offsetWidth ){
+                    arr.push( [ 0, el.parentNode.offsetWidth - el.offsetWidth, el ])
+                }
+            }
+            if( arr ){
+                for ( var i = 0;  i < arr.length;  i++){
+                    arr[i][2].setCss3style('transition','all 8s linear');
+                    arr[i][2].style.marginLeft = '0px';
+                }
+                var i = 0;
+                var scroll = function(){
+                    i =  (i==0) ? 1 : 0;
+                    for ( var j = 0;  j < arr.length;  j++){
+                        arr[j][2].style.marginLeft =  arr[j][i] + 'px';
+                    }
+                }
+                setTimeout(function(){
+                    scroll();
+                },1000)
+                this.scrollIntervalId = setInterval(scroll,8000);
+            }
+        },
         play:function(i){
             if(i)
                 this.currentSong = i;
@@ -69,21 +99,7 @@ window.onload = function(){
             _songName.textContent = this.playList[this.currentSong].name;
             _songInfo.textContent = this.playList[this.currentSong].info;
 
-            clearInterval(t);
-            var l = 0;
-            if(  _songName.offsetWidth  > _songName.parentNode.offsetWidth ){
-                var gundong = function(){
-                    if( l == 0 ){
-                        l =  - _songName.offsetWidth + _songName.parentNode.offsetWidth;   
-                    }else{
-                        console.log('here');
-                        l = 0;
-                    }
-                    _songName.style.marginLeft = l + 'px'
-                }
-                gundong();
-                t = setInterval( gundong,8000);
-            }
+            this.textScroll(_songName,_songInfo);
         },
         getTime : function(i){
             var
@@ -106,7 +122,6 @@ window.onload = function(){
                     rm = '-' + that.getTime( this.duration - this.currentTime),
                     bili = this.currentTime/this.duration, 
                     cu = that.getTime(this.currentTime);
-
                     handler(cu,rm,bili);
                 }else{
                     if( that.random ){
@@ -135,7 +150,6 @@ window.onload = function(){
             }
             this.previousRandom = i;
             this.curentSong = i;
-            console.log(i);
             return i;
         },
         nextSong:function(){
@@ -194,9 +208,9 @@ window.onload = function(){
             info:'Major D for ginus'
         },
         2:{
-            name:'E major',
-            url:'./songs/3.mp3',
-            info:'Major E for ginus'
+            name:'C majorC majorC jorC  majorC majorC major',
+            url:'./songs/2.mp3',
+            info:'Major C for ginusC majorC majorC majorC major'
         },
         3:{
             name:'E major',
