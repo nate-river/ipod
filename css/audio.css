@@ -9,6 +9,9 @@ ol, ul {list-style: none}
   -o-transition:.625s ease;
   transition:.625s ease;
 }
+body{
+  background:url('../image/bg.png') no-repeat center center;
+} 
 #song-name,#song-info{
   -webkit-transition:all 8s linear;
   -moz-transition:all 8s linear;
