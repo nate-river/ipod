@@ -1,62 +1,1037 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset=utf-8/>
-        <title>Ipod</title>
-        <link rel="stylesheet" href="css/audio.css"/>
-        <link rel="shortcut icon" type="image/x-icon" href="./image/play.png">
-        <script src="./js/audio.js"></script>
-    </head>
-    <body>
-        <div class="iphone6">
-            <div class="hei"></div>
-            <div class="main" id="main">
-                <section class="header">
-                    <img width="100%" src="./image/header.png"/>
-                    <div class="show-playlist" id="show-play-list">
-                        <img src="./image/show-playlist.png"/>
-                    </div>
-                </section>
-                <section class="cover"></section>
-                <section class="m-controller">
+<html class="js touch progressive-image ios no-android no-safari no-edge no-ie no-firefox"
+      xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr" prefix="og: http://ogp.me/ns#">
+<head>
 
-                    <div class="curent" id="curent">0:00</div>
-                    <div class="remind" id="remind"></div>
+    <base href="https://www.apple.com">
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://www.apple.com/cn/apple-music/features/">
 
-                    <div class="progress" id="progress"></div>
-                    <div class="progress-flag" id="progress-flag"></div>
 
-                    <div class="song-name" >
-                        <b id="song-name"></b>
-                    </div>
-                    <div class="song-info">
-                        <i id="song-info"></i>
-                    </div>
-                    
-                    <div class="play" id="play-pause"> <img src="./image/pause.png"/> </div>
+    <link rel="alternate" href="https://www.apple.com/ae-ar/apple-music/features/" hreflang="ar-AE">
+    <link rel="alternate" href="https://www.apple.com/ae/apple-music/features/" hreflang="en-AE">
+    <link rel="alternate" href="https://www.apple.com/am/apple-music/features/" hreflang="en-AM">
+    <link rel="alternate" href="https://www.apple.com/apple-music/features/" hreflang="en-US">
+    <link rel="alternate" href="https://www.apple.com/at/apple-music/features/" hreflang="de-AT">
+    <link rel="alternate" href="https://www.apple.com/au/apple-music/features/" hreflang="en-AU">
+    <link rel="alternate" href="https://www.apple.com/befr/apple-music/features/" hreflang="fr-BE">
+    <link rel="alternate" href="https://www.apple.com/benl/apple-music/features/" hreflang="nl-BE">
+    <link rel="alternate" href="https://www.apple.com/bg/apple-music/features/" hreflang="bg-BG">
+    <link rel="alternate" href="https://www.apple.com/bh-ar/apple-music/features/" hreflang="ar-BH">
+    <link rel="alternate" href="https://www.apple.com/bh/apple-music/features/" hreflang="en-BH">
+    <link rel="alternate" href="https://www.apple.com/br/apple-music/features/" hreflang="pt-BR">
+    <link rel="alternate" href="https://www.apple.com/bw/apple-music/features/" hreflang="en-BW">
+    <link rel="alternate" href="https://www.apple.com/ca/apple-music/features/" hreflang="en-CA">
+    <link rel="alternate" href="https://www.apple.com/ca/fr/apple-music/features/" hreflang="fr-CA">
+    <link rel="alternate" href="https://www.apple.com/chde/apple-music/features/" hreflang="de-CH">
+    <link rel="alternate" href="https://www.apple.com/chfr/apple-music/features/" hreflang="fr-CH">
+    <link rel="alternate" href="https://www.apple.com/cl/apple-music/features/" hreflang="es-CL">
+    <link rel="alternate" href="https://www.apple.com/cn/apple-music/features/" hreflang="zh-CN">
+    <link rel="alternate" href="https://www.apple.com/co/apple-music/features/" hreflang="es-CO">
+    <link rel="alternate" href="https://www.apple.com/cz/apple-music/features/" hreflang="cs-CZ">
+    <link rel="alternate" href="https://www.apple.com/de/apple-music/features/" hreflang="de-DE">
+    <link rel="alternate" href="https://www.apple.com/dk/apple-music/features/" hreflang="da-DK">
+    <link rel="alternate" href="https://www.apple.com/ee/apple-music/features/" hreflang="et-EE">
+    <link rel="alternate" href="https://www.apple.com/eg-ar/apple-music/features/" hreflang="ar-EG">
+    <link rel="alternate" href="https://www.apple.com/eg/apple-music/features/" hreflang="en-EG">
+    <link rel="alternate" href="https://www.apple.com/es/apple-music/features/" hreflang="es-ES">
+    <link rel="alternate" href="https://www.apple.com/fi/apple-music/features/" hreflang="fi-FI">
+    <link rel="alternate" href="https://www.apple.com/fr/apple-music/features/" hreflang="fr-FR">
+    <link rel="alternate" href="https://www.apple.com/gr/apple-music/features/" hreflang="el-GR">
+    <link rel="alternate" href="https://www.apple.com/gw/apple-music/features/" hreflang="en-GW">
+    <link rel="alternate" href="https://www.apple.com/hk/apple-music/features/" hreflang="zh-HK">
+    <link rel="alternate" href="https://www.apple.com/hk/en/apple-music/features/" hreflang="en-HK">
+    <link rel="alternate" href="https://www.apple.com/hu/apple-music/features/" hreflang="hu-HU">
+    <link rel="alternate" href="https://www.apple.com/id/apple-music/features/" hreflang="id-ID">
+    <link rel="alternate" href="https://www.apple.com/ie/apple-music/features/" hreflang="en-IE">
+    <link rel="alternate" href="https://www.apple.com/il/apple-music/features/" hreflang="en-IL">
+    <link rel="alternate" href="https://www.apple.com/in/apple-music/features/" hreflang="en-IN">
+    <link rel="alternate" href="https://www.apple.com/it/apple-music/features/" hreflang="it-IT">
+    <link rel="alternate" href="https://www.apple.com/jo-ar/apple-music/features/" hreflang="ar-JO">
+    <link rel="alternate" href="https://www.apple.com/jo/apple-music/features/" hreflang="en-JO">
+    <link rel="alternate" href="https://www.apple.com/jp/apple-music/features/" hreflang="ja-JP">
+    <link rel="alternate" href="https://www.apple.com/ke/apple-music/features/" hreflang="en-KE">
+    <link rel="alternate" href="https://www.apple.com/kr/apple-music/features/" hreflang="ko-KR">
+    <link rel="alternate" href="https://www.apple.com/la/apple-music/features/" hreflang="es-419">
+    <link rel="alternate" href="https://www.apple.com/lae/apple-music/features/" hreflang="en-419">
+    <link rel="alternate" href="https://www.apple.com/lt/apple-music/features/" hreflang="lt-LT">
+    <link rel="alternate" href="https://www.apple.com/lu/apple-music/features/" hreflang="fr-LU">
+    <link rel="alternate" href="https://www.apple.com/lv/apple-music/features/" hreflang="lv-LV">
+    <link rel="alternate" href="https://www.apple.com/md/apple-music/features/" hreflang="en-MD">
+    <link rel="alternate" href="https://www.apple.com/mo/apple-music/features/" hreflang="zh-MO">
+    <link rel="alternate" href="https://www.apple.com/mt/apple-music/features/" hreflang="en-MT">
+    <link rel="alternate" href="https://www.apple.com/mu/apple-music/features/" hreflang="fr-MU">
+    <link rel="alternate" href="https://www.apple.com/mx/apple-music/features/" hreflang="es-MX">
+    <link rel="alternate" href="https://www.apple.com/my/apple-music/features/" hreflang="en-MY">
+    <link rel="alternate" href="https://www.apple.com/ne/apple-music/features/" hreflang="fr-NE">
+    <link rel="alternate" href="https://www.apple.com/ng/apple-music/features/" hreflang="en-NG">
+    <link rel="alternate" href="https://www.apple.com/nl/apple-music/features/" hreflang="nl-NL">
+    <link rel="alternate" href="https://www.apple.com/no/apple-music/features/" hreflang="no-NO">
+    <link rel="alternate" href="https://www.apple.com/nz/apple-music/features/" hreflang="en-NZ">
+    <link rel="alternate" href="https://www.apple.com/om-ar/apple-music/features/" hreflang="ar-OM">
+    <link rel="alternate" href="https://www.apple.com/om/apple-music/features/" hreflang="en-OM">
+    <link rel="alternate" href="https://www.apple.com/ph/apple-music/features/" hreflang="en-PH">
+    <link rel="alternate" href="https://www.apple.com/pl/apple-music/features/" hreflang="pl-PL">
+    <link rel="alternate" href="https://www.apple.com/pt/apple-music/features/" hreflang="pt-PT">
+    <link rel="alternate" href="https://www.apple.com/ro/apple-music/features/" hreflang="ro-RO">
+    <link rel="alternate" href="https://www.apple.com/ru/apple-music/features/" hreflang="ru-RU">
+    <link rel="alternate" href="https://www.apple.com/sa-ar/apple-music/features/" hreflang="ar-SA">
+    <link rel="alternate" href="https://www.apple.com/sa/apple-music/features/" hreflang="en-SA">
+    <link rel="alternate" href="https://www.apple.com/se/apple-music/features/" hreflang="sv-SE">
+    <link rel="alternate" href="https://www.apple.com/sg/apple-music/features/" hreflang="en-SG">
+    <link rel="alternate" href="https://www.apple.com/si/apple-music/features/" hreflang="en-SI">
+    <link rel="alternate" href="https://www.apple.com/sk/apple-music/features/" hreflang="sk-SK">
+    <link rel="alternate" href="https://www.apple.com/th/apple-music/features/" hreflang="th-TH">
+    <link rel="alternate" href="https://www.apple.com/tr/apple-music/features/" hreflang="tr-TR">
+    <link rel="alternate" href="https://www.apple.com/tw/apple-music/features/" hreflang="zh-TW">
+    <link rel="alternate" href="https://www.apple.com/ug/apple-music/features/" hreflang="en-UG">
+    <link rel="alternate" href="https://www.apple.com/uk/apple-music/features/" hreflang="en-GB">
+    <link rel="alternate" href="https://www.apple.com/vn/apple-music/features/" hreflang="en-VN">
+    <link rel="alternate" href="https://www.apple.com/za/apple-music/features/" hreflang="en-ZA">
 
-                    <div class="previous" id="previous"> <img src="./image/previous.png"/> </div>
-                    <div class="next" id="next"> <img src="./image/next.png"/> </div>
 
-                    <!-- <div class="for-click" id="for-click"> -->
-                        <div class="volume" id="volume">
-                            <div class="volume-shadow" id="volume-shadow"></div>
-                        </div>
-                    <!-- </div> -->
-                    <div class="volume-circle" id="volume-circle"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-                    <div class="v-min"><img src="./image/v-min.png"/> </div>
-                    <div class="v-max"><img src="./image/v-max.png"/> </div>
 
-                    <div class="repeat" id="repeat"> Repeat </div>
-                    <div class="random" id="random"> Random </div>
-                </section>
+    <link rel="stylesheet" type="text/css" href="/ac/globalnav/4/zh_CN/styles/ac-globalnav.built.css">
+    <link rel="stylesheet" type="text/css" href="/ac/localnav/4/styles/ac-localnav.built.css">
+    <link rel="stylesheet" type="text/css" href="/ac/globalfooter/3/zh_CN/styles/ac-globalfooter.built.css">
+
+
+    <title>Apple Music - 功能 - Apple (中国)</title>
+    <meta name="Description" content="Apple Music 让你以不同于以往的方式，发现和聆听音乐。 你可以轻松探索最新歌曲，随时访问 Apple 或你自己的音乐目录。">
+    <meta property="og:image" content="https://www.apple.com/cn/apple-music/images/og_image.png?201901171512">
+    <meta property="og:title" content="Apple Music - 功能">
+    <meta property="og:description" content="Apple Music 让你以不同于以往的方式，发现和聆听音乐。 你可以轻松探索最新歌曲，随时访问 Apple 或你自己的音乐目录。">
+    <meta property="og:url" content="https://www.apple.com/cn/apple-music/features/">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Apple (中国) - 官方网站">
+    <meta property="og:type" content="website">
+    <meta name="twitter:site" content="@Apple">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="analytics-track" content="Apple Music - Features - Index">
+    <meta property="analytics-s-channel" content="music">
+
+    <meta property="analytics-s-bucket-0" content="appleglobal,apple{COUNTRY_CODE}music">
+    <meta property="analytics-s-bucket-1" content="apple{COUNTRY_CODE}global,apple{COUNTRY_CODE}music">
+    <meta property="analytics-s-bucket-2" content="apple{COUNTRY_CODE}global">
+    <meta property="analytics-s-bucket-store" content="applestoreww,applestoreapaccnzh">
+
+
+    <link rel="stylesheet" href="/wss/fonts?families=SF+Pro,v2|SF+Pro+Icons,v1">
+    <link rel="stylesheet" href="/v/apple-music/i/built/styles/main.built.css" type="text/css">
+    <link rel="stylesheet" href="/v/apple-music/i/built/styles/features.built.css" type="text/css">
+    <link rel="stylesheet" href="/cn/apple-music/styles/features.built.css" type="text/css">
+    <link rel="stylesheet" href="/cn/apple-music/styles/features.images.css" type="text/css">
+    <script src="/v/apple-music/i/built/scripts/head.built.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="/wss/fonts?family=SF+Pro+SC&amp;weights=200,300,400,500,600&amp;v=1" type="text/css">
+    <link rel="stylesheet" href="/cn/global/styles/sfpro-cn.css">
+
+    <!--[if IE]>
+    <link rel="stylesheet" href="/wss/fonts?family=SF+Pro+SC&amp;weights=200,300,400,500,600&amp;v=1" type="text/css">
+    <link rel="stylesheet" href="/cn/global/styles/sfpro-cn-ie.css"/>
+    <![endif]-->
+</head>
+<body class="page-features ac-gn-current-music ac-nav-overlap" data-anim-scroll-group="body">
+<div style="display:none;"><img src="/cn/apple-music/images/og_wechat.png" alt=""></div>
+
+
+<style>
+    html {
+        margin-top: 40px !important;
+    }
+
+    body {
+        border-top: 1px solid transparent;
+        margin-top: -1px;
+        position: relative;
+    }
+
+    html.oldie body {
+        overflow-x: visible;
+    }
+
+    .adv-wrapper {
+        position: absolute;
+        top: -40px;
+        z-index: 9999;
+        background: #444;
+        line-height: 1;
+        top: -40px;
+        width: 100%;
+        right: 0;
+        height: 40px;
+        z-index: 9999;
+    }
+
+    .ac-gn-segmentbar-visible .adv-wrapper {
+        position: absolute;
+        top: -40px;
+    }
+
+    .ac-gn-segmentbar-visible .macpro-gg .adv-wrapper {
+        top: 0px;
+    }
+
+    .adv-wrapper .adv-wrapper-text {
+        color: #a8a8aa;
+        display: block;
+        line-height: 40px;
+        overflow: hidden;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        text-align: right;
+        max-width: 976px;
+        margin: 0 auto;
+    }
+
+    .ac-gn-segmentbar-visible .adv-wrapper {
+        background: transparent;
+        width: 20%
+    }
+
+    .ac-gn-segmentbar-visible .adv-wrapper .adv-wrapper-text {
+        width: 100%;
+        margin-left: 488px;
+        position: absolute;
+        left: -250%;
+        min-width: auto;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .adv-wrapper {
+            min-width: 20%
+        }
+
+        .adv-wrapper .adv-wrapper-text {
+            margin-left: auto;
+            width: auto;
+            padding: 0 22px;
+            position: relative;
+            left: 0;
+            padding-left: calc(max(22px, env(safe-area-inset-left)));
+            padding-right: calc(max(22px, env(safe-area-inset-right)));
+        }
+
+        .ac-gn-segmentbar-visible .adv-wrapper .adv-wrapper-text {
+            width: auto;
+            position: relative;
+            padding: 0 12px;
+            left: -6%;
+            margin: 0;
+        }
+
+        .ac-gn-segmentbar-visible #sonic-automotive.profiles.platter.full-nav.ac-gn-current-iphone .adv-wrapper .adv-wrapper-text,
+        .ac-gn-segmentbar-visible #ducati.profiles.platter.full-nav.ac-gn-current-iphone .adv-wrapper .adv-wrapper-text,
+        .ac-gn-segmentbar-visible #mayo-clinic.profiles.platter.ac-gn-current-iphone.full-nav .adv-wrapper .adv-wrapper-text {
+            left: -27%;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .adv-wrapper .adv-wrapper-text {
+            line-height: 40px;
+            margin-left: auto;
+            width: auto;
+            padding: 0 16px;
+            position: relative;
+            left: 0;
+        }
+
+        .ac-gn-segmentbar-visible .adv-wrapper .adv-wrapper-text {
+            width: auto;
+            position: relative;
+            left: 0;
+            margin: 0;
+        }
+
+        .ac-gn-segmentbar-visible #sonic-automotive.profiles.platter.full-nav.ac-gn-current-iphone .adv-wrapper .adv-wrapper-text,
+        .ac-gn-segmentbar-visible #ducati.profiles.platter.full-nav.ac-gn-current-iphone .adv-wrapper .adv-wrapper-text,
+        .ac-gn-segmentbar-visible #mayo-clinic.profiles.platter.ac-gn-current-iphone.full-nav .adv-wrapper .adv-wrapper-text {
+            left: -25%;
+        }
+
+        .adv-wrapper {
+            top: -44px;
+            height: 44px
+        }
+
+        .ac-gn-segmentbar-visible .adv-wrapper {
+            top: -44px;
+            height: 44px
+        }
+
+        .adv-wrapper .adv-wrapper-text {
+            line-height: 44px;
+        }
+
+        html {
+            margin-top: 44px !important;
+        }
+
+    }
+
+    .adv-wrapper .adv-wrapper-text {
+        color: #a8a8aa;
+        font-size: 12px;
+        font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    }
+
+    /* Always show in IE8, whether zoom because IE8 doesnt have responsive. */
+    /* hack for IE8 without shop button */
+    /*js no-touch no-svg ie8 no-progressive no-transforms no-tablet no-handheld no-oldTablet no-maskBoxImage no-maskedParallaxAnimation no-webgl no-video no-inlineVideo no-canvas cssFilter no-cssTransition2d no-cssTransition3d ie*/
+
+    html.ie8, html.oldie, html.oldIE {
+        margin-top: 0px !important;
+    }
+
+    html.ie8 .adv-wrapper, html.oldie .adv-wrapper, html.oldIE .adv-wrapper {
+        position: relative;
+        top: 0px;
+        min-width: 1024px;
+    }
+
+    html.ie8 .adv-wrapper .adv-wrapper-text, html.oldie .adv-wrapper .adv-wrapper-text, html.oldIE .adv-wrapper .adv-wrapper-text {
+        line-height: 40px;
+    }
+
+    html.ie8 #ac-globalnav, html.oldie #ac-globalnav, html.oldIE #ac-globalnav {
+        top: 40px;
+    }
+
+    html.ie8 .ac-familybrowser, html.oldie .ac-familybrowser, html.oldIE .ac-familybrowser {
+        top: 84px;
+    }
+
+    html.ie8 .ac-nav-overlap .chapternav, html.oldie .ac-nav-overlap .chapternav, html.oldIE .ac-nav-overlap .chapternav {
+        margin-top: 84px;
+    }
+
+    /* hack for IE8 with shop button*/
+    html.ie8.ac-gn-segmentbar-visible #ac-gn-segmentbar, html.oldie.ac-gn-segmentbar-visible #ac-gn-segmentbar, html.oldIE.ac-gn-segmentbar-visible #ac-gn-segmentbar {
+        position: relative;
+        top: 0;
+    }
+
+    html.ie8.ac-gn-segmentbar-visible .adv-wrapper, html.oldie.ac-gn-segmentbar-visible .adv-wrapper, html.oldIE.ac-gn-segmentbar-visible .adv-wrapper {
+        position: absolute;
+        min-width: auto;
+    }
+</style>
+
+
+<meta name="ac-gn-store-key" content="SFX9YPYY9PPXCU9KH">
+<aside id="ac-gn-segmentbar" class="ac-gn-segmentbar" lang="zh-CN" dir="ltr"
+       data-strings="{ 'exit': '退出商店', 'view': '{%STOREFRONT%}商店首页', 'segments': { 'smb': '企业商店首页', 'eduInd': '教育商店首页', 'other': '商店首页' } }">
+</aside>
+<input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+<script type="text/javascript" src="/ac/globalnav/4/zh_CN/scripts/ac-globalnav.built.js"></script>
+<div id="ac-gn-viewport-emitter"></div>
+
+
+<script src="/metrics/ac-analytics/2.6.0/scripts/ac-analytics.js" type="text/javascript" charset="utf-8"></script>
+<script src="/metrics/ac-analytics/2.6.0/scripts/auto-init.js" type="text/javascript" charset="utf-8"></script>
+
+<input type="checkbox" id="ac-ln-menustate" class="ac-ln-menustate">
+<div id="ac-ln-sticky-placeholder" class="css-sticky"></div>
+<nav id="ac-localnav" class="ac-localnav-scrim js touch css-sticky" lang="zh-CN" dir="ltr" data-sticky=""
+     data-analytics-region="local nav" role="navigation" aria-label="本地">
+    <div class="ac-ln-wrapper">
+        <div class="ac-ln-background"></div>
+        <div class="ac-ln-content">
+            <div class="ac-ln-title">
+                <a href="/cn/apple-music/" data-analytics-title="product index">优逸客</a>
             </div>
-            <div class="play-list" id="play-list">
-                <section class="header">
-                </section>
+            <div class="ac-ln-menu">
+                <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open"
+                   id="ac-ln-menustate-open"> <span class="ac-ln-menucta-anchor-label">打开菜单</span> </a> <a href="#"
+                                                                                                           class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close"
+                                                                                                           id="ac-ln-menustate-close">
+                <span class="ac-ln-menucta-anchor-label">关闭菜单</span> </a>
+                <div class="ac-ln-menu-tray">
+                    <ul class="ac-ln-menu-items">
+                        <li class="ac-ln-menu-item">
+                            <a href="/cn/apple-music/" class="ac-ln-menu-link" data-analytics-title="overview">概览</a>
+                        </li>
+                        <li class="ac-ln-menu-item">
+                            <span class="ac-ln-menu-link current" role="link" aria-disabled="true" aria-current="page"
+                                  data-analytics-title="features">功能</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ac-ln-actions ac-ln-actions-center">
+                    <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                        <label for="ac-ln-menustate" class="ac-ln-menucta">
+                            <span class="ac-ln-menucta-chevron"></span>
+                        </label>
+                    </div>
+                    <div class="ac-ln-action ac-ln-action-button control-element">
+                        <button class="ac-ln-button"
+                                data-url="https://itunes.apple.com/subscribe?app=music&amp;at=1000l4QJ&amp;ct=401&amp;itscg=10000&amp;itsct=401x"
+                                data-download-button="" data-analytics-title="free trial-apple music-local nav"
+                                data-analytics-click="prop3:free trial-apple music-local nav"
+                                data-android-fallback="/cn/apple-music/android-download/"
+                                data-windows-fallback="/cn/itunes/download/"><span class="rollover">立即咨询</span><span
+                                class="ac-ln-action-product"></span></button>
+                    </div>
+                    <div class="ac-ln-action ac-ln-action-button variant-a-element">
+                        <button class="ac-ln-button"
+                                data-url="https://itunes.apple.com/subscribe?app=music&amp;at=1000l4QJ&amp;ct=401a&amp;itscg=10000&amp;itsct=401a"
+                                data-download-button="" data-analytics-title="free trial-apple music-local nav"
+                                data-analytics-click="prop3:free trial-apple music-local nav"
+                                data-android-fallback="/cn/apple-music/android-download/"
+                                data-windows-fallback="/cn/itunes/download/"><span class="rollover">免费试用*</span><span
+                                class="ac-ln-action-product"></span></button>
+                    </div>
+                    <div class="ac-ln-action ac-ln-action-button variant-b-element">
+                        <button class="ac-ln-button"
+                                data-url="https://itunes.apple.com/subscribe?app=music&amp;at=1000l4QJ&amp;ct=401b&amp;itscg=10000&amp;itsct=401b"
+                                data-download-button="" data-analytics-title="free trial-apple music-local nav"
+                                data-analytics-click="prop3:free trial-apple music-local nav"
+                                data-android-fallback="/cn/apple-music/android-download/"
+                                data-windows-fallback="/cn/itunes/download/"><span class="rollover">免费试用*</span><span
+                                class="ac-ln-action-product"></span></button>
+                    </div>
+                    <div class="ac-ln-action ac-ln-action-button variant-c-element">
+                        <button class="ac-ln-button"
+                                data-url="https://itunes.apple.com/subscribe?app=music&amp;at=1000l4QJ&amp;ct=401c&amp;itscg=10000&amp;itsct=401c"
+                                data-download-button="" data-analytics-title="free trial-apple music-local nav"
+                                data-analytics-click="prop3:free trial-apple music-local nav"
+                                data-android-fallback="/cn/apple-music/android-download/"
+                                data-windows-fallback="/cn/itunes/download/"><span class="rollover">免费试用*</span><span
+                                class="ac-ln-action-product"></span></button>
+                    </div>
+                </div>
             </div>
         </div>
-        <audio id="audio" src="./songs/1.mp3"></audio>
-    </body>
+    </div>
+</nav>
+<label id="ac-ln-curtain" for="ac-ln-menustate"></label>
+<script type="text/javascript" src="/ac/localnav/4/scripts/ac-localnav.built.js"></script>
+<div id="ac-ln-viewport-emitter">&nbsp;</div>
+
+<main id="main" class="main" role="main" data-page-type="features" data-anim-scroll-group="bubble-gum-group">
+    <section class="section section-hero"
+             data-anim-tween="{&quot;start&quot;:&quot;0%&quot;,&quot;end&quot;:&quot;100% - 70px&quot;, &quot;y&quot;:[&quot;0&quot;,&quot;70px&quot;], &quot;breakpointMask&quot;: &quot;XLM&quot;}"
+             data-anim-scroll-group="hero" data-component-list="LocalNavThemeChangerComponent"
+             data-analytics-section-engagement="name:hero">
+        <div class="section-content">
+            <div class="column large-9 medium-11 small-12 large-centered">
+                <h1 class="typography-headline-super centerall">拒绝做设计界的<br class="large-hide medium-hide small-show">搬运工
+                </h1>
+                <p class="typography-intro-elevated">只会搬运设计？你痛苦吗？你迷茫吗？互联网寒冬来了！要裁员了？慌不慌<span class="nowrap"></span></p>
+                <figure class="image-hero">
+                    <figure class="image-hero-xlarge-left"></figure>
+                    <figure class="image-hero-xlarge-right"></figure>
+                </figure>
+            </div>
+        </div>
+        <div class="background-gradient"
+             data-anim-tween="{&quot;start&quot;:&quot;0%&quot;,&quot;end&quot;:&quot;33%&quot;,&quot;y&quot;:[&quot;0&quot;,&quot;-66%&quot;]}"
+             data-anim-scroll-group="hero-background" style="transform: translate(0px, 0px);"></div>
+        <div class="background-gradient-shadow"></div>
+    </section>
+    <section class="section section-discover">
+        <div class="section-content">
+            <h2 class="typography-headline-super">优逸客提供专业的UI培训，重点培养以下能力</h2>
+            <div class="row row-logical card-row">
+
+                <div class="card card-artist column engaged"
+                     data-anim-classname="{&quot;start&quot;:&quot;0% - 100vh&quot;,&quot;cssClass&quot;:&quot;engaged&quot;}"
+                     data-component-list="InlineAnimationComponent" data-anim-locale="cn"
+                     data-anim-filename="anim/features/artist-page">
+                    <h3 class="typography-intro-elevated">虚拟现实人机交互技能<span class="nowrap"></span></h3>
+                    <figure class="image-hardware-iphonex">
+                        <figure class="image-artist image-hardware-screen">
+                            <div class="animation-artist animation-container mediaobject-enhanced"
+                                 data-anim-container=""
+                                 data-anim-options="{&quot;start&quot;:&quot;-50vh&quot;, &quot;end&quot;:&quot;100%&quot;, &quot;replay&quot;:true}"
+                                 aria-hidden="true">
+                                <video muted="" playsinline="" class="mediaobject-ios-inline-video mediaobject-element"
+                                       src="/105/media/cn/apple-music/2018/a30d5a32-e9e4-42d8-92a4-31c006ae8067/anim/features/artist-page/small_2x.mp4"
+                                       style="visibility: visible;"></video>
+                            </div>
+                        </figure>
+                    </figure>
+                    <button class="icon icon-after icon-replay typography-body-reduced"
+                            aria-label="replay artist animation" data-replay-for="animation-artist"
+                            data-analytics-click="prop3:replay - card-artist"
+                            data-analytics-title="replay - card-artist">重播
+                    </button>
+                </div>
+                <div class="row row-logical card-row">
+
+                    <div class="card card-artist column engaged"
+                         data-anim-classname="{&quot;start&quot;:&quot;0% - 100vh&quot;,&quot;cssClass&quot;:&quot;engaged&quot;}"
+                         data-component-list="InlineAnimationComponent" data-anim-locale="cn"
+                         data-anim-filename="anim/features/artist-page">
+                        <h3 class="typography-intro-elevated">产品设计能力<span class="nowrap"></span></h3>
+                        <figure class="image-hardware-iphonex">
+                            <figure class="image-artist image-hardware-screen">
+                                <div class="animation-artist animation-container mediaobject-enhanced"
+                                     data-anim-container=""
+                                     data-anim-options="{&quot;start&quot;:&quot;-50vh&quot;, &quot;end&quot;:&quot;100%&quot;, &quot;replay&quot;:true}"
+                                     aria-hidden="true">
+                                    <video muted="" playsinline=""
+                                           class="mediaobject-ios-inline-video mediaobject-element"
+                                           src="/105/media/cn/apple-music/2018/a30d5a32-e9e4-42d8-92a4-31c006ae8067/anim/features/artist-page/small_2x.mp4"
+                                           style="visibility: visible;"></video>
+                                </div>
+                            </figure>
+                        </figure>
+                        <button class="icon icon-after icon-replay typography-body-reduced"
+                                aria-label="replay artist animation" data-replay-for="animation-artist"
+                                data-analytics-click="prop3:replay - card-artist"
+                                data-analytics-title="replay - card-artist">重播
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-logical card-row">
+                <div class="card card-videos column engaged"
+                     data-anim-classname="{&quot;start&quot;:&quot;0% - 100vh&quot;,&quot;cssClass&quot;:&quot;engaged&quot;}"
+                     data-analytics-section-engagement="name:card-videos">
+                    <h3 class="typography-intro-elevated">微信小程序开发能力<span class="nowrap">这，很难想象</span></h3>
+                    <figure class="image-hardware-iphonex">
+                        <figure class="image-videos image-hardware-screen"></figure>
+                    </figure>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="section section-listen" data-analytics-section-engagement="name:listen">
+        <div class="section-content">
+            <h2 class="typography-headline-super">完善的课程体系</h2>
+            <div class="row row-logical card-row">
+                <div class="card card-download column engaged"
+                     data-anim-classname="{&quot;start&quot;:&quot;0% - 100vh&quot;,&quot;cssClass&quot;:&quot;engaged&quot;}">
+                    <h3 class="typography-intro-elevated">这里有课程体系的各大阶段</h3>
+                    <figure class="figure-wrapper">
+                        <figure class="image-download"></figure>
+                    </figure>
+                </div>
+                <div class="card card-lyrics column engaged"
+                     data-anim-classname="{&quot;start&quot;:&quot;0% - 100vh&quot;,&quot;cssClass&quot;:&quot;engaged&quot;}"
+                     data-component-list="InlineAnimationComponent" data-anim-locale="cn"
+                     data-anim-filename="anim/features/lyrics">
+                    <h3 class="typography-intro-elevated">实训项目的来源
+                    </h3>
+                    <figure class="image-hardware-iphonex">
+                        <figure class="image-lyrics image-hardware-screen">
+                            <div class="animation-lyrics animation-container mediaobject-enhanced"
+                                 data-anim-container=""
+                                 data-anim-options="{&quot;start&quot;:&quot;-50vh&quot;, &quot;end&quot;:&quot;100%&quot;, &quot;replay&quot;:true}"
+                                 aria-hidden="true">
+                                <video muted="" playsinline="" class="mediaobject-ios-inline-video mediaobject-element"
+                                       src="/105/media/cn/apple-music/2018/a30d5a32-e9e4-42d8-92a4-31c006ae8067/anim/features/lyrics/small_2x.mp4"
+                                       style="visibility: visible;"></video>
+                            </div>
+                        </figure>
+                    </figure>
+                    <button class="icon icon-after icon-replay typography-body-reduced"
+                            aria-label="replay lyrics animation" data-replay-for="animation-lyrics"
+                            data-analytics-click="prop3:replay - card-lyrics"
+                            data-analytics-title="replay - card-lyrics">重播
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section section-devices" data-analytics-section-engagement="name:devices">
+        <div class="section-content">
+            <h2 class="typography-headline-elevated large-9 large-centered small-11">可信任的师资团队</h2>
+            <ul class="device-list">
+                <li class="device-list-item">
+                    <figure class="device-icon icon-iphone"></figure>
+                    <p class="device-caption typography-intro-elevated">iPhone</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-ipad"></figure>
+                    <p class="device-caption typography-intro-elevated">iPad</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-watch"></figure>
+                    <p class="device-caption typography-intro-elevated">Apple&nbsp;Watch</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-mac"></figure>
+                    <p class="device-caption typography-intro-elevated">Mac</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-carplay"></figure>
+                    <p class="device-caption typography-intro-elevated">CarPlay&nbsp;车载</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-homepod"></figure>
+                    <p class="device-caption typography-intro-elevated">HomePod</p>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="section-content">
+            <h2 class="typography-headline-elevated large-9 large-centered small-11">可信任的学员高薪就业情况</h2>
+            <ul class="device-list">
+                <li class="device-list-item">
+                    <figure class="device-icon icon-iphone"></figure>
+                    <p class="device-caption typography-intro-elevated">iPhone</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-ipad"></figure>
+                    <p class="device-caption typography-intro-elevated">iPad</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-watch"></figure>
+                    <p class="device-caption typography-intro-elevated">Apple&nbsp;Watch</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-mac"></figure>
+                    <p class="device-caption typography-intro-elevated">Mac</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-carplay"></figure>
+                    <p class="device-caption typography-intro-elevated">CarPlay&nbsp;车载</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-homepod"></figure>
+                    <p class="device-caption typography-intro-elevated">HomePod</p>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="section-content">
+            <h2 class="typography-headline-elevated large-9 large-centered small-11">拥有优秀的作品去打动严苛的面试官</h2>
+            <ul class="device-list">
+                <li class="device-list-item">
+                    <figure class="device-icon icon-iphone"></figure>
+                    <p class="device-caption typography-intro-elevated">iPhone</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-ipad"></figure>
+                    <p class="device-caption typography-intro-elevated">iPad</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-watch"></figure>
+                    <p class="device-caption typography-intro-elevated">Apple&nbsp;Watch</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-mac"></figure>
+                    <p class="device-caption typography-intro-elevated">Mac</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-carplay"></figure>
+                    <p class="device-caption typography-intro-elevated">CarPlay&nbsp;车载</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-homepod"></figure>
+                    <p class="device-caption typography-intro-elevated">HomePod</p>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="section-content">
+            <h2 class="typography-headline-elevated large-9 large-centered small-11">优美的教学环境</h2>
+            <ul class="device-list">
+                <li class="device-list-item">
+                    <figure class="device-icon icon-iphone"></figure>
+                    <p class="device-caption typography-intro-elevated">iPhone</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-ipad"></figure>
+                    <p class="device-caption typography-intro-elevated">iPad</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-watch"></figure>
+                    <p class="device-caption typography-intro-elevated">Apple&nbsp;Watch</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-mac"></figure>
+                    <p class="device-caption typography-intro-elevated">Mac</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-carplay"></figure>
+                    <p class="device-caption typography-intro-elevated">CarPlay&nbsp;车载</p>
+                </li>
+                <li class="device-list-item">
+                    <figure class="device-icon icon-homepod"></figure>
+                    <p class="device-caption typography-intro-elevated">HomePod</p>
+                </li>
+
+
+            </ul>
+        </div>
+    </section>
+    <section class="section section-plans" data-component-list="LocalNavThemeChangerComponent"
+             data-analytics-section-engagement="name:plans">
+        <div class="section-content">
+            <figure class="icon-apple-music"></figure>
+            <h2 class="typography-headline-elevated">扫描二维码<span class="nowrap">免费领取视频</span><span style="display:none;"><a
+                    href="#footnote-1" class="footnote">*</a></span></h2>
+
+            <p class="typography-caption visuallyhidden" aria-hidden="true"
+               data-download-disclaimer="{&quot;app&quot;: &quot;itunes&quot;, &quot;browser&quot;: &quot;windows&quot;}">
+                Apple Music 适用于 iTunes，且在 iOS 和 Android 设备上都能听。</p>
+
+        </div>
+    </section>
+</main><!--/main-->
+<footer id="ac-globalfooter" class="js flexbox" lang="zh-CN" dir="ltr" data-analytics-region="global footer"
+        role="contentinfo" aria-labelledby="ac-gf-label">
+    <div class="ac-gf-content">
+        <h2 class="ac-gf-label" id="ac-gf-label">Apple Footer</h2>
+        <section class="ac-gf-sosumi" aria-label="Footnotes">
+            <ul>
+                <li id="footnote-1">
+                    <small>*</small>
+                    仅限新订阅用户。当试用期结束后，会员方案将按月自动续订。
+                </li>
+                <li id="footnote-2">
+                    <small>**</small>
+                    仅限高校学生。需要通过验证。
+                </li>
+            </ul>
+        </section>
+        <nav class="ac-gf-breadcrumbs" aria-label="网页结构导航" role="navigation"><a href="/cn/"
+                                                                                class="home ac-gf-breadcrumbs-home">
+            <span class="ac-gf-breadcrumbs-home-icon" aria-hidden="true"></span> <span
+                class="ac-gf-breadcrumbs-home-label">Apple</span> <span class="ac-gf-breadcrumbs-home-chevron"></span>
+            <span class="ac-gf-breadcrumbs-home-mask"></span> </a>
+            <div class="ac-gf-breadcrumbs-path">
+                <ol class="ac-gf-breadcrumbs-list" vocab="http://schema.org/" typeof="BreadcrumbList">
+                    <li class="ac-gf-breadcrumbs-item" property="itemListElement" typeof="ListItem">
+                        <a class="ac-gf-breadcrumbs-link" href="/cn/music/" property="item" typeof="WebPage"><span
+                                property="name">Music</span></a>
+                        <meta property="position" content="1">
+                    </li>
+                    <li class="ac-gf-breadcrumbs-item" property="itemListElement" typeof="ListItem">
+                        <a class="ac-gf-breadcrumbs-link" href="/cn/apple-music/" property="item" typeof="WebPage"><span
+                                property="name">Apple Music</span></a>
+                        <meta property="position" content="2">
+                    </li>
+                    <li class="ac-gf-breadcrumbs-item" property="itemListElement" typeof="ListItem">
+                        <span property="name">功能</span>
+                        <meta property="position" content="3">
+                    </li>
+                </ol>
+            </div>
+        </nav>
+        <nav class="ac-gf-directory with-5-columns" aria-label="Apple 网站目录" role="navigation">
+            <!--googleoff: all-->
+            <div class="ac-gf-directory-column"><input class="ac-gf-directory-column-section-state" type="checkbox"
+                                                       id="ac-gf-directory-column-section-state-products">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-products">
+                        <h3 class="ac-gf-directory-column-section-title">选购及了解</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-products"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/mac/">Mac</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/ipad/">iPad</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/iphone/">iPhone</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/watch/">Watch</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/music/">Music</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/itunes/">iTunes</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/homepod/">HomePod</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/ipod-touch/">iPod touch</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/buy_accessories">配件</a>
+                        </li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/itunes/gifts/">App Store 充值卡</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ac-gf-directory-column"><input class="ac-gf-directory-column-section-state" type="checkbox"
+                                                       id="ac-gf-directory-column-section-state-storeservices">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-storeservices">
+                        <h3 class="ac-gf-directory-column-section-title">Apple Store 商店</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-storeservices"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/retail/">查找零售店</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/retail/geniusbar/">Genius Bar
+                            天才吧</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/today/">Today at Apple</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/today/camp/">Apple 夏令营</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/retail/fieldtrip/">Field Trip
+                            课外活动</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="https://itunes.apple.com/cn/app/apple-store/id375380948?pt=2003&amp;ct=footer&amp;mt=8">Apple
+                            Store App</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/special_deals">翻新和优惠</a>
+                        </li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/ww/financing">分期付款</a>
+                        </li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/trade_in">Apple&nbsp;GiveBack
+                            回馈计划</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/account">订单状态</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/help">选购帮助</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ac-gf-directory-column">
+                <input class="ac-gf-directory-column-section-state" type="checkbox"
+                       id="ac-gf-directory-column-section-state-education">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-education">
+                        <h3 class="ac-gf-directory-column-section-title">教育应用</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-education"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/education/">Apple 与教育</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/educationrouting">高校师生选购</a>
+                        </li>
+                    </ul>
+                </div>
+                <input class="ac-gf-directory-column-section-state" type="checkbox"
+                       id="ac-gf-directory-column-section-state-business">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-business">
+                        <h3 class="ac-gf-directory-column-section-title">商务应用</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-business"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/business/">Apple 与商务</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/retail/business/">商务选购</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ac-gf-directory-column">
+                <input class="ac-gf-directory-column-section-state" type="checkbox"
+                       id="ac-gf-directory-column-section-state-accounts">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-accounts">
+                        <h3 class="ac-gf-directory-column-section-title">账户</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-accounts"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="https://appleid.apple.com/cn/">管理你的
+                            Apple ID</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/shop/goto/account">Apple Store
+                            账户</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="https://www.icloud.com">iCloud.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <input class="ac-gf-directory-column-section-state" type="checkbox"
+                       id="ac-gf-directory-column-section-state-responsibility">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-responsibility">
+                        <h3 class="ac-gf-directory-column-section-title">Apple 价值观</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-responsibility"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/accessibility/">辅助功能</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/environment/">环境责任</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/privacy/">隐私</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/supplier-responsibility/">供应商责任</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ac-gf-directory-column">
+                <input class="ac-gf-directory-column-section-state" type="checkbox"
+                       id="ac-gf-directory-column-section-state-about">
+                <div class="ac-gf-directory-column-section">
+                    <label class="ac-gf-directory-column-section-label"
+                           for="ac-gf-directory-column-section-state-about">
+                        <h3 class="ac-gf-directory-column-section-title">关于 Apple</h3>
+                    </label>
+                    <a href="#ac-gf-directory-column-section-state-about"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-open">
+                        <span class="ac-gf-directory-column-section-anchor-label">打开菜单</span>
+                    </a>
+                    <a href="#"
+                       class="ac-gf-directory-column-section-anchor ac-gf-directory-column-section-anchor-close">
+                        <span class="ac-gf-directory-column-section-anchor-label">关闭菜单</span>
+                    </a>
+                    <ul class="ac-gf-directory-column-section-list">
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/newsroom/">Newsroom</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/leadership/">Apple 管理层</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/jobs/cn/">工作机会</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/job-creation/">创造就业</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/apple-events/">活动</a></li>
+                        <li class="ac-gf-directory-column-section-item"><a class="ac-gf-directory-column-section-link"
+                                                                           href="/cn/contact/">联系 Apple</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--googleon: all-->
+        </nav>
+
+        <section class="ac-gf-footer">
+            <div class="ac-gf-footer-shop" x-ms-format-detection="none">
+                更多选购方式：前往 <span class="nowrap"><a href="/cn/retail/">Apple Store 零售店</a></span>，致电 400-666-8800 或查找在你附近的<span
+                    class="nowrap"><a href="https://locate.apple.com/cn/zh/">授权经销商</a>。</span>
+            </div>
+            <div class="ac-gf-footer-locale">
+            </div>
+            <div class="ac-gf-footer-legal">
+                <div class="ac-gf-footer-legal-copyright">Copyright ©
+
+                    2019
+                    Apple Inc. 保留所有权利。
+                </div>
+                <div class="ac-gf-footer-legal-links">
+                    <a class="ac-gf-footer-legal-link" href="/cn/privacy/privacy-policy/">隐私政策</a>
+                    <a class="ac-gf-footer-legal-link" href="/cn/legal/terms/site.html">使用条款</a>
+                    <a class="ac-gf-footer-legal-link" href="/cn/shop/goto/help/sales_refunds">销售政策</a>
+                    <a class="ac-gf-footer-legal-link" href="/cn/legal/">法律信息</a>
+                    <a class="ac-gf-footer-legal-link" href="/cn/sitemap/">网站地图</a>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="/ac/globalfooter/3/zh_CN/scripts/ac-globalfooter.built.js"></script>
+        <script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@id": "https://www.apple.com/#organization",
+		"@type": "Organization",
+		"name": "Apple",
+		"url": "https://www.apple.com/",
+		"logo": "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?201901171512",
+		"contactPoint": [
+			{
+				"@type": "ContactPoint",
+				"telephone": "+1-800-692-7753",
+				"contactType": "sales",
+				"areaServed": "US"
+			},
+			{
+				"@type": "ContactPoint",
+				"telephone": "+1-800-275-2273",
+				"contactType": "technical support",
+				"areaServed": "US",
+				"availableLanguage": ["EN", "ES"]
+			},
+			{
+				"@type": "ContactPoint",
+				"telephone": "+1-800-275-2273",
+				"contactType": "customer support",
+				"areaServed": "US",
+				"availableLanguage": ["EN", "ES"]
+			}
+		],
+		"sameAs": [
+			"http://www.wikidata.org/entity/Q312",
+			"https://www.youtube.com/user/Apple",
+			"https://www.linkedin.com/company/apple",
+			"https://www.facebook.com/Apple",
+			"https://www.twitter.com/Apple"
+		]
+	}
+
+        </script>
+
+
+        <script type="text/javascript" src="/ac/localeswitcher/2/zh_CN/scripts/localeswitcher.built.js"></script>
+
+
+    </div>
+</footer>
+<script src="/v/apple-music/i/built/scripts/main.built.js" type="text/javascript" charset="utf-8"></script>
+<div id="viewport-emitter" data-viewport-emitter-dispatch=""
+     data-viewport-emitter-state="{&quot;viewport&quot;:&quot;none&quot;,&quot;orientation&quot;:&quot;portrait&quot;,&quot;retina&quot;:true}"></div>
+<span style="display: none;">&nbsp;</span>
+
+
+</body>
 </html>
